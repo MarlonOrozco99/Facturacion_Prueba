@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/25 14:53:52.000.488,=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/25 21:40:28.000.854,=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/25 21:51:04.000.232,=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/04/25 22:06:57.000.885,C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Prueba\Unit1.pas</Transaction>
+    <Transaction>2023/04/25 22:06:57.000.885,C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Prueba\Unit1.dfm</Transaction>
+    <Transaction>2023/04/25 22:06:59.000.805,C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Prueba\Unit2.pas</Transaction>
+    <Transaction>2023/04/25 22:06:59.000.805,C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Prueba\Unit2.dfm</Transaction>
+    <Transaction>2023/04/25 22:07:05.000.864,C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Prueba\Project1.dproj</Transaction>
+    <Transaction>2023/04/25 22:08:06.000.365,=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Prueba\Unit3.pas</Transaction>
+    <Transaction>2023/04/25 22:25:07.000.605,=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Prueba\Unit4.pas</Transaction>
+    <Transaction>2023/04/25 22:40:20.000.168,=C:\Users\Marlon.Orozco\Documents\Embarcadero\Studio\Prueba\Unit5.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,82 @@
+--- CLIENTES ----
+CREATE TABLE Clientes (
+  Cliente INT PRIMARY KEY,
+  Nombre_Cliente VARCHAR(50) NOT NULL,
+  Direccion VARCHAR(100) NOT NULL
+);
+
+INSERT INTO Clientes (Cliente, Nombre_Cliente, Direccion) VALUES 
+(1, 'Juan Pérez', 'Calle 123, Ciudad A'),
+(2, 'María Gómez', 'Avenida 456, Ciudad B'),
+(3, 'Pedro Ramírez', 'Calle 789, Ciudad C'),
+(4, 'Ana López', 'Avenida 012, Ciudad D'),
+(5, 'Luisa Torres', 'Calle 345, Ciudad E'),
+(6, 'José García', 'Avenida 678, Ciudad F'),
+(7, 'Laura Sánchez', 'Calle 901, Ciudad G'),
+(8, 'Diego Martínez', 'Avenida 234, Ciudad H'),
+(9, 'Sandra Ruiz', 'Calle 567, Ciudad I'),
+(10, 'Roberto Castro', 'Avenida 890, Ciudad J');
+
+
+--- Cabeza_Factura ----
+CREATE TABLE Cabeza_Factura (
+  Numero INT PRIMARY KEY,
+  Fecha DATE NOT NULL,
+  Cliente INT,
+  Total DECIMAL(10, 2),
+  FOREIGN KEY (Cliente) REFERENCES Clientes(Cliente)
+);
+
+INSERT INTO Cabeza_Factura (Numero, Fecha, Cliente, Total) VALUES 
+(1, '2022-01-01', 1, 100.00),
+(2, '2022-01-02', 2, 200.00),
+(3, '2022-01-03', 3, 300.00),
+(4, '2022-01-04', 4, 400.00),
+(5, '2022-01-05', 5, 500.00),
+(6, '2022-01-06', 6, 600.00),
+(7, '2022-01-07', 7, 700.00),
+(8, '2022-01-08', 8, 800.00),
+(9, '2022-01-09', 9, 900.00),
+(10, '2022-01-10', 10, 1000.00);
+
+
+--- Detalle_Factura ----
+CREATE TABLE Detalle_Factura (
+  Numero INT,
+  Producto INT,
+  Cantidad INT,
+  Valor DECIMAL(10, 2),
+  FOREIGN KEY (Numero) REFERENCES Cabeza_Factura(Numero),
+  FOREIGN KEY (Producto) REFERENCES Productos(Producto)
+);
+
+INSERT INTO Detalle_Factura (Numero, Producto, Cantidad, Valor) VALUES 
+(1, 1, 2, 50.00),
+(1, 2, 3, 25.00),
+(2, 3, 5, 20.00),
+(2, 4, 1, 80.00),
+(3, 5, 2, 75.00),
+(3, 6, 3, 40.00),
+(4, 7, 1, 120.00),
+(4, 8, 4, 15.00),
+(5, 9, 5, 50.00),
+(5, 10, 2, 100.00);
+
+---Productos ----
+CREATE TABLE Productos (
+  Producto INT PRIMARY KEY,
+  Nombre_Producto VARCHAR(50) NOT NULL,
+  Valor DECIMAL(10, 2) NOT NULL
+);
+
+INSERT INTO Productos (Producto, Nombre_Producto, Valor) VALUES 
+(1, 'Producto A', 20.00),
+(2, 'Producto B', 15.00),
+(3, 'Producto C', 10.00),
+(4, 'Producto D', 80.00),
+(5, 'Producto E', 25.00),
+(6, 'Producto F', 13.00),
+(7, 'Producto G', 120.00),
+(8, 'Producto H', 5.00),
+(9, 'Producto I', 10.00),
+(10, 'Producto J', 50.00);

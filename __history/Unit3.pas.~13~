@@ -1,0 +1,65 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys,
+  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef, FireDAC.VCLUI.Wait, Data.DB,
+  FireDAC.Comp.Client, FireDAC.Comp.DataSet;
+
+type
+  TForm3 = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Edit2: TEdit;
+    Label3: TLabel;
+    Edit3: TEdit;
+    Label4: TLabel;
+    Edit4: TEdit;
+    Button1: TButton;
+    FDQuery1: TFDQuery;
+    FDConnection1: TFDConnection;
+    Label5: TLabel;
+    FDQuery2: TFDQuery;
+    procedure Button1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm3.Button1Click(Sender: TObject);
+
+begin
+//agregar insert
+
+   FDQuery2.ParamByName('PRODUCTO').AsString := Edit1.Text;
+
+
+end;
+
+procedure TForm3.FormShow(Sender: TObject);
+var
+   numero_factura : integer;
+begin
+   FDQuery1.Open;
+   numero_factura := FDQuery1.FieldByName('NUMERO').AsInteger + 1;
+
+   Label5.Caption := Label5.Caption + IntToStr(numero_factura);
+
+end;
+
+end.
